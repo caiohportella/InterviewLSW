@@ -47,7 +47,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void UpdateText()
     {
-        //null
+        
         int letterCount = (int)(lineToShow.Length * visibleTextPercent);
         targetText.text = lineToShow.Substring(0, letterCount);
     }
@@ -62,7 +62,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         if(currentTextLine >= currentDialogue.lines.Count)
-        {//null
+        {
             Conclude();
         } else
         {
