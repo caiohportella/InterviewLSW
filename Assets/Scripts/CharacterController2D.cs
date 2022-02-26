@@ -8,6 +8,8 @@ using UnityEngine;
 public class CharacterController2D : MonoBehaviour
 {
     [SerializeField] float speed = 2f;
+    [SerializeField] InventoryPanel inventory;
+    [SerializeField] Currency money;
 
     Rigidbody2D rb2D;
     Vector2 motionVector;
@@ -40,6 +42,11 @@ public class CharacterController2D : MonoBehaviour
             animator.SetFloat("lastHorizontal", horizontal);
             animator.SetFloat("lastVertical", vertical);
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void FixedUpdate()
@@ -50,5 +57,30 @@ public class CharacterController2D : MonoBehaviour
     private void Move()
     {
         rb2D.velocity = motionVector * speed;
+    }
+
+    public void OnBuy()
+    {
+        if(money.GetCurrentMoney() > 1000)
+        {
+            inventory.AddItem(4);
+            inventory.AddItem(5);
+            OnGetMoney(-400);
+        }
+    }
+
+    public void OnSell()
+    {
+        if(inventory.HasItem(4) && inventory.HasItem(5))
+        {
+            inventory.RemoveItem(4);
+            inventory.RemoveItem(5);
+            OnGetMoney(400);
+        }
+    }
+
+    public void OnGetMoney(int _amountGained)
+    {
+        money.SetMoney(money.GetCurrentMoney() + _amountGained);
     }
 }

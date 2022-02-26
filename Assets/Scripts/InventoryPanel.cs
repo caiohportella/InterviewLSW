@@ -20,7 +20,7 @@ public class InventoryPanel : MonoBehaviour
 
     private void SetIndex()
     {
-        for(int i = 0; i < inventory.slots.Count; i++)
+        for (int i = 0; i < inventory.slots.Count; i++)
         {
             slots[i].SetIndex(i);
         }
@@ -34,10 +34,26 @@ public class InventoryPanel : MonoBehaviour
             if (inventory.slots[i].item == null)
             {
                 slots[i].Clean();
-            } else
+            }
+            else
             {
                 slots[i].Set(inventory.slots[i]);
             }
         }
+    }
+
+    public void AddItem(int _slot)
+    {
+        slots[_slot].gameObject.SetActive(true);
+    }
+
+    public void RemoveItem(int _slot)
+    {
+        slots[_slot].gameObject.SetActive(false);
+    }
+
+    public bool HasItem(int _slot)
+    {
+        return slots[_slot].gameObject.activeSelf;
     }
 }

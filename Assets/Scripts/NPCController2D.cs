@@ -11,6 +11,8 @@ public class NPCController2D : Interactable
     Trading trading;
     Store store;
 
+    public bool bCanShop;
+
     public override void Interact(Character _ch)
     {
         GameManager.gm.dialogueSystem.InitializeDialogue(dialogue);

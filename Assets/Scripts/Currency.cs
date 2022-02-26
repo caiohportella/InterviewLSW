@@ -17,4 +17,15 @@ public class Currency : MonoBehaviour
     {
         text.text = amount.ToString();
     }
+
+    public int GetCurrentMoney()
+    {
+        return amount;
+    }
+
+    public void SetMoney(int _earning)
+    {
+        amount = _earning;
+        UpdateText();
+    }
 }

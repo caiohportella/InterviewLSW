@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ce90d400c4e1754eb0edafe2cf4cd01, type: 3}
-  m_Name: Item_Sword
+  m_Script: {fileID: 11500000, guid: fe98029b981c6374f92f66030849a682, type: 3}
+  m_Name: New Actor 1
   m_EditorClassIdentifier: 
-  Name: Sword
-  icon: {fileID: 0}
+  Name: Nergal
+  portrait: {fileID: 21300000, guid: 0eb7854509a14904886e7dd52a36565d, type: 3}

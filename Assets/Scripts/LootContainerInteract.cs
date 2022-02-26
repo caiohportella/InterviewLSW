@@ -7,14 +7,18 @@ public class LootContainerInteract : Interactable
     //Pre-written code
     [SerializeField] GameObject chestOpened;
     [SerializeField] GameObject chestClosed;
-    [SerializeField] bool opened;
+    [SerializeField] ParticleSystem coinSpawn = null;
+    [SerializeField] CharacterController2D character;
+    [SerializeField] bool bOpened;
     public override void Interact(Character _ch)
     {
-        if(opened == false)
+        if(bOpened == false)
         {
-            opened = true;
+            bOpened = true;
             chestClosed.SetActive(false);
             chestOpened.SetActive(true);
+            coinSpawn.Play();
+            character.OnGetMoney(50);
         }
     }
 }

@@ -8,6 +8,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] Text targetText;
     [SerializeField] Text nameText;
     [SerializeField] Image portrait;
+    [SerializeField] GameObject shopPanel;
 
     [Range(0f, 1f)]
     [SerializeField] float visibleTextPercent;
@@ -16,9 +17,7 @@ public class DialogueSystem : MonoBehaviour
     DialogueContainer currentDialogue;
 
     int currentTextLine;
-
     float totalTimeTyping, currentTime;
-
     string lineToShow;
 
     private void Update()
@@ -52,6 +51,7 @@ public class DialogueSystem : MonoBehaviour
         targetText.text = lineToShow.Substring(0, letterCount);
     }
 
+    //Shows text
     private void PushText()
     {
         if(visibleTextPercent < 1f)
@@ -106,5 +106,9 @@ public class DialogueSystem : MonoBehaviour
     {
         Debug.Log("Dialogue ended");
         Display(false);
+        //Invoke(100);
+        shopPanel.SetActive(true);
+
+
     }
 }

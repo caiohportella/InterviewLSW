@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Item_Shirt
   m_EditorClassIdentifier: 
   Name: Shirt
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a5f70abf651de1247995b02908ab775e, type: 3}

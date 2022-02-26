@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ce90d400c4e1754eb0edafe2cf4cd01, type: 3}
-  m_Name: Item_Bracelet
+  m_Name: Item_Necklace
   m_EditorClassIdentifier: 
-  Name: Bracelet
-  icon: {fileID: 0}
+  Name: Necklace
+  icon: {fileID: 21300000, guid: 3c2b73ace76f5fb4b9a2572cc2733d91, type: 3}

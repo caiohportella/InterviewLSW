@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ce90d400c4e1754eb0edafe2cf4cd01, type: 3}
-  m_Name: Item_Pants
+  m_Name: Item_Ring
   m_EditorClassIdentifier: 
-  Name: Pants
-  icon: {fileID: 0}
+  Name: Ring
+  icon: {fileID: 21300000, guid: e482ed4bffe06f047afcb5972f6dc8ba, type: 3}
